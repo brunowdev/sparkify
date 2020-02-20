@@ -13,3 +13,12 @@ There are some variations of this dataset:
 - There are two more versions:
     - https://brunobitencourt.com/data/udacity/sparkify/mini_sparkify_event_data.json
     - https://brunobitencourt.com/data/udacity/sparkify/medium_sparkify_event_data.json
+
+## Churn types
+
+- Downgrade subscription
+- Canceling the service
+
+## Dataset
+
+- `ts` - Event timestamp in milliseconds 
