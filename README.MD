@@ -21,4 +21,20 @@ There are some variations of this dataset:
 
 ## Dataset
 
-- `ts` - Event timestamp in milliseconds 
+- `ts`: Event timestamp in milliseconds 
+- `gender`: M or F
+- `firstName`: First name of the user
+- `lastName`: Last name of the user
+- `length`: Length of the song
+- `level`: Level of subscription `free` or `paid.`
+- `registration`: User registration timestamp 
+- `userId`: User id at the service
+- `auth`: If the user is logged
+- `page`: Action of the event (next song, thumps up, thumbs down)
+- `sessionId`: Id of the session
+- `location`: Location of the event
+- `userAgent`: Browser/web agent of the event
+- `song`: Name of the song
+- `artist`: Name of the artist
+- `method`: HTTP method of the event
+- `status`: HTTP status of the request (200, 404)
