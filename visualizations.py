@@ -10,6 +10,52 @@ import chart_studio.plotly as py
 
 plotly_offline.init_notebook_mode(connected=False)
 
+columns_abs_values = [
+    {'male': 'male'},
+    {'paid': 'paid'},
+    {'canc': 'churn'},
+    {'n_upgr': 'upgrades'},
+    {'n_down': 'downgrades'},
+    {'n_acti': 'actions'},
+    {'n_ads': 'ads'},
+    {'n_adde': 'playlist added'},
+    {'n_disl': 'dislikes'},
+    {'n_erro': 'errors'},
+    {'n_frie': 'friends'},
+    {'n_help': 'help'},
+    {'n_home': 'home'},
+    {'n_like': 'likes'},
+    {'n_sess': 'sessions'},
+    {'n_song': 'songs by session'},
+    {'n_sett': 'settings'}
+]
+
+columns_avg_values = [
+    {'male': 'male'},
+    {'paid': 'paid'},
+    {'canc': 'churn'},
+    {'a_acti': 'actions'},
+    {'a_adde': 'playlist added'},
+    {'a_ads': 'ads'},
+    {'a_disl': 'dislikes'},
+    {'a_erro': 'errors'},
+    {'a_frie': 'friends'},
+    {'a_help': 'help'},
+    {'a_home': 'home'},
+    {'a_like': 'likes'},
+    {'a_play': 'songs'},
+    {'a_sett': 'settings'},
+    {'a_song': 'songs by session'},
+    {'a_stim': 'intervals'},
+    {'a_tiaw': 'time away'}
+]
+
+def get_abs_column_names():
+    return list(map(lambda c: list(c.keys())[0], columns_abs_values))
+
+def get_avg_column_names():
+    return list(map(lambda c: list(c.keys())[0], columns_avg_values))
+
 def plot_churn_histogram(df):
 
     t1 = go.Histogram(
@@ -253,50 +299,8 @@ def plot_heatmap(df, column_map, title):
     
     fig.show()
 
-def plot_feature_corr_for_avg_values(df):
-
-    columns = [
-        {'male': 'male'},
-        {'paid': 'paid'},
-        {'canc': 'churn'},
-        {'a_acti': 'actions'},
-        {'a_adde': 'playlist added'},
-        {'a_ads': 'ads'},
-        {'a_disl': 'dislikes'},
-        {'a_erro': 'errors'},
-        {'a_frie': 'friends'},
-        {'a_help': 'help'},
-        {'a_home': 'home'},
-        {'a_like': 'likes'},
-        {'a_play': 'songs'},
-        {'a_sett': 'settings'},
-        {'a_song': 'songs by session'},
-        {'a_stim': 'intervals'},
-        {'a_tiaw': 'time away'}
-    ]
-    
-    return plot_heatmap(df, columns, 'Features and their correlation<br><i>(considering the mean average for each feature)</i><br>')
+def plot_feature_corr_for_avg_values(df):    
+    return plot_heatmap(df, columns_avg_values, 'Features and their correlation<br><i>(considering the mean average for each feature)</i><br>')
 
 def plot_feature_corr_for_values(df):
-    
-    columns = [
-        {'male': 'male'},
-        {'paid': 'paid'},
-        {'canc': 'churn'},
-        {'n_upgr': 'upgrades'},
-        {'n_down': 'downgrades'},
-        {'n_acti': 'actions'},
-        {'n_ads': 'ads'},
-        {'n_adde': 'playlist added'},
-        {'n_disl': 'dislikes'},
-        {'n_erro': 'errors'},
-        {'n_frie': 'friends'},
-        {'n_help': 'help'},
-        {'n_home': 'home'},
-        {'n_like': 'likes'},
-        {'n_sess': 'sessions'},
-        {'n_song': 'songs by session'},
-        {'n_sett': 'settings'}
-    ]
-    
-    return plot_heatmap(df, columns, 'Features and their correlation<br><i>(considering the total for each feature)</i><br>')    
+    return plot_heatmap(df, columns_abs_values, 'Features and their correlation<br><i>(considering the total for each feature)</i><br>')    
