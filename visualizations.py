@@ -13,41 +13,41 @@ plotly_offline.init_notebook_mode(connected=False)
 columns_abs_values = [
     {'male': 'male'},
     {'paid': 'paid'},
-    {'canc': 'churn'},
-    {'n_upgr': 'upgrades'},
-    {'n_down': 'downgrades'},
-    {'n_acti': 'actions'},
+    {'canceled': 'churn'},
+    {'n_upgrades': 'upgrades'},
+    {'n_downgrades': 'downgrades'},
+    {'n_actions': 'actions'},
     {'n_ads': 'ads'},
-    {'n_adde': 'playlist added'},
-    {'n_disl': 'dislikes'},
-    {'n_erro': 'errors'},
-    {'n_frie': 'friends'},
+    {'n_added_to_playlist': 'playlist added'},
+    {'n_dislikes': 'dislikes'},
+    {'n_errors': 'errors'},
+    {'n_friends': 'friends'},
     {'n_help': 'help'},
     {'n_home': 'home'},
-    {'n_like': 'likes'},
+    {'n_likes': 'likes'},
     {'n_sess': 'sessions'},
-    {'n_song': 'songs by session'},
-    {'n_sett': 'settings'}
+    {'n_songs': 'songs by session'},
+    {'n_settings': 'settings'}
 ]
 
 columns_avg_values = [
     {'male': 'male'},
     {'paid': 'paid'},
-    {'canc': 'churn'},
-    {'a_acti': 'actions'},
-    {'a_adde': 'playlist added'},
-    {'a_ads': 'ads'},
-    {'a_disl': 'dislikes'},
-    {'a_erro': 'errors'},
-    {'a_frie': 'friends'},
-    {'a_help': 'help'},
-    {'a_home': 'home'},
-    {'a_like': 'likes'},
-    {'a_play': 'songs'},
-    {'a_sett': 'settings'},
-    {'a_song': 'songs by session'},
-    {'a_stim': 'intervals'},
-    {'a_tiaw': 'time away'}
+    {'canceled': 'churn'},
+    {'session_avg_actions': 'actions'},
+    {'session_avg_added_playlist': 'playlist added'},
+    {'session_avg_ads': 'ads'},
+    {'session_avg_dislikes': 'dislikes'},
+    {'session_avg_errors': 'errors'},
+    {'session_avg_friends': 'friends'},
+    {'session_avg_help': 'help'},
+    {'session_avg_home': 'home'},
+    {'session_avg_likes': 'likes'},
+    {'session_avg_playback': 'songs'},
+    {'session_avg_settings': 'settings'},
+    {'session_avg_songs': 'songs by session'},
+    {'time_window': 'intervals'},
+    {'session_avg_time_away': 'time away'}
 ]
 
 def get_abs_column_names():
@@ -254,9 +254,9 @@ def plot_churn_by_subscription_type(df):
     fig.show()
 
 def feature_corr_or_empty(value, min_to_show = .1, max_to_show = .99):
-    _value = '' if (value < min_to_show or value > max_to_show) else value
-    if value > .75 and _value != '':
-        _value = f'<b>{_value}</b>'
+    _value = np.around(value, 2) #'' if (value < min_to_show or value > max_to_show) else value
+    #if value > .75 and _value != '':
+    #    _value = f'<b>{_value}</b>'
     return _value
 
 def plot_heatmap(df, column_map, title):
