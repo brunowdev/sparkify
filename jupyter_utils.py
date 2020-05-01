@@ -15,6 +15,10 @@ def apply_options(pd, max_rows = 500, max_columns = 500, d_width = 1000):
     pd.set_option('display.max_rows', max_rows)
     pd.set_option('display.max_columns', max_columns)
     pd.set_option('display.width', d_width)
+    pd.set_option('display.max_colwidth', None)
+    
+    pd.options.mode.chained_assignment = None
+    pd.set_option('display.float_format', lambda x: '%.4f' % x)
 
 def reload(module):
     import importlib
