@@ -27,6 +27,7 @@ columns_abs_values = [
     {'n_likes': 'likes'},
     {'n_sess': 'sessions'},
     {'n_songs': 'songs by session'},
+    {'n_songs': 'songs by session'},
     {'n_settings': 'settings'}
 ]
 
@@ -43,9 +44,9 @@ columns_avg_values = [
     {'session_avg_help': 'help'},
     {'session_avg_home': 'home'},
     {'session_avg_likes': 'likes'},
-    {'session_avg_playback': 'songs'},
+    {'session_avg_playback': 'average time playing songs'},
     {'session_avg_settings': 'settings'},
-    {'session_avg_songs': 'songs by session'},
+    {'session_avg_songs': 'songs played by session'},
     {'time_window': 'intervals'},
     {'session_avg_time_away': 'time away'}
 ]
