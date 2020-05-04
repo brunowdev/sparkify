@@ -1,4 +1,3 @@
-
 def maximize_notebook():
     try:
         from IPython.core.display import display, HTML
@@ -7,6 +6,7 @@ def maximize_notebook():
         print(f'Error while maximizing the notebook cells: {str(e)}')
 
 def apply_options(pd, max_rows = 500, max_columns = 500, d_width = 1000):
+    
     if pd is None:
         print('Please import pandas before calling this function.')
         return
@@ -19,6 +19,7 @@ def apply_options(pd, max_rows = 500, max_columns = 500, d_width = 1000):
     
     pd.options.mode.chained_assignment = None
     pd.set_option('display.float_format', lambda x: '%.4f' % x)
+    pd.set_option('use_inf_as_na', True
 
 def reload(module):
     import importlib
