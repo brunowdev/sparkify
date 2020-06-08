@@ -47,6 +47,7 @@ To a more complete analysis, I recommend check my article [here](https://medium.
 .
 ├── results/ # Folder with the static version of the notebooks - Also hosted online (See at the project overview)
 ├── pyspark.sh # The file to run and config PySpark for local mode
+├── visualizations.py # The implementation of some visualizations on Plotly, for a more interactive heatmap (See on the data exploration notebook)
 ├── jupyter_utils.py # A script to config pandas for a standard view between all the notebooks
 ├── Data Exploration.ipynb # Notebook with the exploration of the raw data and after the feature engineering
 ├── Sparkify.ipynb # Notebook with the exploration and feature engineering
