@@ -1,28 +1,44 @@
 # Sparkify Capstone Project
 
-## File Descriptions <a name="files"></a>
 
-There are some variations of this dataset:
+At this project, we predict churn for a fictional streaming service called Sparkify. 
 
-- A set with the first 2 million lines is available here:
-    - https://brunobitencourt.com/data/udacity/sparkify/2m_rows_sparkify_event_data.csv
+The complete analysis and discussion are available [here](https://medium.com/@brunowdev/predicting-churn-with-pyspark-sparkify-capstone-project-5ad91781c491?source=friends_link&sk=26df5c31c0983f8d59f6d2939190511f).
 
-- The full dataset is available here - 12Gb:
-    - https://brunobitencourt.com/data/udacity/sparkify/full_sparkify_event_data.json
+### Table of Contents
 
-- I've created a small version without some columns (firstName, lastName, location, userAgent), but with all the events - 2Gb.
-    - https://brunobitencourt.com/data/udacity/sparkify/sparkify_full_csv_data.csv
+1. [Requirements](#requirements)
+2. [Project Overview](#overview)
+3. [File Descriptions](#files)
+4. [Running the project](#running) 
 
-- There are two more versions:
-    - https://brunobitencourt.com/data/udacity/sparkify/mini_sparkify_event_data.json
-    - https://brunobitencourt.com/data/udacity/sparkify/medium_sparkify_event_data.json
+## Requirements <a name="requirements"></a>
 
-## Churn types
+- Python 3
+- The comple list of requirents can be found at `requirements.txt`
+
+## Project Overview <a name="overview"></a>
+
+- TODO
+
+Churn types
 
 - Downgrade subscription
 - Canceling the service
 
-## Dataset
+
+## File Descriptions <a name="files"></a>
+
+#### Dataset:
+
+The dataset was given by Udacity. I've hosted on my S3 to make it more comfortable to download and work between my environments.
+
+- The full dataset is available [here](https://brunobitencourt.com/data/udacity/sparkify/full_sparkify_event_data.json) - 12Gb:
+  
+- I've created a small version without some columns (firstName, lastName, location, userAgent), but with all the events - available [here](https://brunobitencourt.com/data/udacity/sparkify/sparkify_full_csv_data.csv) - 2Gb.
+
+
+Raw Dataset features
 
 - `ts`: Event timestamp in milliseconds 
 - `gender`: M or F
@@ -41,3 +57,6 @@ There are some variations of this dataset:
 - `artist`: Name of the artist
 - `method`: HTTP method of the event
 - `status`: HTTP status of the request (200, 404)
+
+
+
