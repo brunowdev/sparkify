@@ -1,6 +1,5 @@
 # Sparkify Capstone Project
 
-
 At this project, we predict churn for a fictional streaming service called Sparkify. 
 
 The complete analysis and discussion are available [here](https://medium.com/@brunowdev/predicting-churn-with-pyspark-sparkify-capstone-project-5ad91781c491?source=friends_link&sk=26df5c31c0983f8d59f6d2939190511f).
@@ -44,6 +43,17 @@ To a more complete analysis, I recommend check my article [here](https://medium.
 
 ## File Descriptions <a name="files"></a>
 
+<pre>
+.
+├── results/ # Folder with the static version of the notebooks - Also hosted online (See at the project overview)
+├── pyspark.sh # The file to run and config PySpark for local mode
+├── jupyter_utils.py # A script to config pandas for a standard view between all the notebooks
+├── Data Exploration.ipynb # Notebook with the exploration of the raw data and after the feature engineering
+├── Sparkify.ipynb # Notebook with the exploration and feature engineering
+├── Results - Spark.ipynb # Notebook with all the visualizations related to the results of training and the GridSearch
+├── requirements.txt # The project dependencies
+</pre>
+
 #### Dataset:
 
 The dataset was given by Udacity. I've hosted on my S3 to make it more comfortable to download and work between my environments.
@@ -83,3 +93,5 @@ The medium dataset, the entire dataset as JSON, or the entire dataset as CSV (my
 To running locally, I recommend downloading the dataset, so you won't need to download each time with Spark.
 
 If you want to run the visualizations, don't forget to install the requirements, especially the plotly lib.
+
+
