@@ -5,6 +5,12 @@ At this project, we predict churn for a fictional streaming service called Spark
 
 The complete analysis and discussion are available [here](https://medium.com/@brunowdev/predicting-churn-with-pyspark-sparkify-capstone-project-5ad91781c491?source=friends_link&sk=26df5c31c0983f8d59f6d2939190511f).
 
+
+<div align="center">
+    <img src="https://brunobitencourt.com/public/images/sparkify_logo.png" width="200" height="200" />
+</div>
+
+
 ### Table of Contents
 
 1. [Requirements](#requirements)
