@@ -11,9 +11,9 @@ import chart_studio.plotly as py
 plotly_offline.init_notebook_mode(connected=False)
 
 columns_abs_values = [
+    {'canceled': 'churn'},
     {'male': 'male'},
     {'paid': 'paid'},
-    {'canceled': 'churn'},
     {'n_upgrades': 'upgrades'},
     {'n_downgrades': 'downgrades'},
     {'n_actions': 'actions'},
@@ -32,16 +32,13 @@ columns_abs_values = [
     {'n_ads_over_songs':'ads vs. songs'},
     {'n_dislikes_over_songs':'dislikes over songs'},
     {'n_likes_over_dislikes':'likes vs. dislikes'},
-    {'n_likes_over_songs':'likes vs. songs'},
-    {'time_window':'observed time'},
-    {'time_window_over_playback_time':'observed time vs. playback time'},
-    
+    {'n_likes_over_songs':'likes vs. songs'}
 ]
 
 columns_avg_values = [
+    {'canceled': 'churn'},
     {'male': 'male'},
     {'paid': 'paid'},
-    {'canceled': 'churn'},
     {'session_avg_actions': 'actions'},
     {'session_avg_added_playlist': 'playlist added'},
     {'session_avg_ads': 'ads'},
@@ -51,12 +48,16 @@ columns_avg_values = [
     {'session_avg_help': 'help'},
     {'session_avg_home': 'home'},
     {'session_avg_likes': 'likes'},
-    {'session_avg_playback': 'average time playing songs'},
     {'session_avg_settings': 'settings'},
     {'session_avg_songs': 'songs played by session'},
-    {'time_window': 'intervals'},
-    {'session_avg_time_away': 'time away'}
+    {'session_avg_time_away': 'time away'},
+    {'avg_daily_actions':'daily actions'},
+    {'avg_playback_time':'playback time'},
+    {'avg_session_duration':'session duration'},
+    {'time_window': 'observed time'},
+    {'time_window_over_playback_time':'observed time vs. playback time'}
 ]
+
 
 def get_abs_column_names():
     return list(map(lambda c: list(c.keys())[0], columns_abs_values))
@@ -262,9 +263,7 @@ def plot_churn_by_subscription_type(df):
     fig.show()
 
 def feature_corr_or_empty(value, min_to_show = .1, max_to_show = .99):
-    _value = np.around(value, 2) #'' if (value < min_to_show or value > max_to_show) else value
-    #if value > .75 and _value != '':
-    #    _value = f'<b>{_value}</b>'
+    _value = np.around(value, 2) 
     return _value
 
 def plot_heatmap(df, column_map, title):
@@ -308,7 +307,7 @@ def plot_heatmap(df, column_map, title):
     fig.show()
 
 def plot_feature_corr_for_avg_values(df):    
-    return plot_heatmap(df, columns_avg_values, 'Features and their correlation<br><i>(considering the mean average for each feature)</i><br>')
+    return plot_heatmap(df, columns_avg_values, '')
 
 def plot_feature_corr_for_values(df):
-    return plot_heatmap(df, columns_abs_values, 'Features and their correlation<br><i>(considering the total for each feature)</i><br>')    
+    return plot_heatmap(df, columns_abs_values, '')    
