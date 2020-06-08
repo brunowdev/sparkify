@@ -27,12 +27,19 @@ The complete analysis and discussion are available [here](https://medium.com/@br
 
 ## Project Overview <a name="overview"></a>
 
-- TODO
+At this project, we try to predict if a user will churn (Canceling the service) given some information regarding the service interactions.
 
-Churn types
+In the future, we can try to predict if the user will Downgrade the subscription (became a free user).
 
-- Downgrade subscription
-- Canceling the service
+I've applied four classification algorithms and several techniques to work with the data. 
+
+To allow an easy visualization, I've hosted the notebook HTML files online, so you will see a static version, without the need to open the .ipynb at the GitHub (which is usually slow and hangs for large files).
+
+- [The notebook with the training process](https://brunobitencourt.com/data/udacity/sparkify/Sparkify.html);
+- [The result analysis - For all the algorithms and metrics](https://brunobitencourt.com/data/udacity/sparkify/Results+-+Spark.html);
+- [The data exploration (with the raw data and the final version with the new engineered features)](https://brunobitencourt.com/data/udacity/sparkify/Data+Exploration.html).
+
+To a more complete analysis, I recommend check my article [here](https://medium.com/@brunowdev/predicting-churn-with-pyspark-sparkify-capstone-project-5ad91781c491?source=friends_link&sk=26df5c31c0983f8d59f6d2939190511f).
 
 
 ## File Descriptions <a name="files"></a>
@@ -67,4 +74,12 @@ Raw Dataset features
 - `status`: HTTP status of the request (200, 404)
 
 
+## Running the project <a name="running"></a>
 
+To run the training code, you can run the `pyspark.sh.` file, then just go to the Sparkify notebook.
+The next step is to decide which version of the data will fit you. For example, there are three variations of the load file.
+The medium dataset, the entire dataset as JSON, or the entire dataset as CSV (my version of it, as I've mentioned at the [files section](#files)).
+
+To running locally, I recommend downloading the dataset, so you won't need to download each time with Spark.
+
+If you want to run the visualizations, don't forget to install the requirements, especially the plotly lib.
