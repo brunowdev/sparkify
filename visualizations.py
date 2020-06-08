@@ -17,6 +17,7 @@ columns_abs_values = [
     {'n_upgrades': 'upgrades'},
     {'n_downgrades': 'downgrades'},
     {'n_actions': 'actions'},
+    {'n_days':'Number of observed days'},
     {'n_ads': 'ads'},
     {'n_added_to_playlist': 'playlist added'},
     {'n_dislikes': 'dislikes'},
@@ -26,9 +27,13 @@ columns_abs_values = [
     {'n_home': 'home'},
     {'n_likes': 'likes'},
     {'n_sess': 'sessions'},
-    {'n_songs': 'songs by session'},
-    {'n_songs': 'songs by session'},
-    {'n_settings': 'settings'}
+    {'n_songs': 'songs by session'}, 
+    {'n_settings': 'settings'}, 
+    {'n_ads_over_songs':'ads vs. songs'},
+    {'n_dislikes_over_songs':'dislikes over songs'},
+    {'n_likes_over_dislikes':'likes vs. dislikes'},
+    {'n_likes_over_songs':'likes vs. songs'},
+    
 ]
 
 columns_avg_values = [
