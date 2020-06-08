@@ -33,6 +33,8 @@ columns_abs_values = [
     {'n_dislikes_over_songs':'dislikes over songs'},
     {'n_likes_over_dislikes':'likes vs. dislikes'},
     {'n_likes_over_songs':'likes vs. songs'},
+    {'time_window':'observed time'},
+    {'time_window_over_playback_time':'observed time vs. playback time'},
     
 ]
 
