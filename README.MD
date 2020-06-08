@@ -8,6 +8,8 @@ The complete analysis and discussion are available [here](https://medium.com/@br
 
 <div align="center">
     <img src="https://brunobitencourt.com/public/images/sparkify_logo.png" width="200" height="200" />
+    <p>Do you want to churn?
+</p>
 </div>
 
 
