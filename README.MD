@@ -88,7 +88,7 @@ Raw Dataset features
 
 To run the training code, you can run the `pyspark.sh.` file, then just go to the Sparkify notebook.
 The next step is to decide which version of the data will fit you. For example, there are three variations of the load file.
-The medium dataset, the entire dataset as JSON, or the entire dataset as CSV (my version of it, as I've mentioned at the [files section](#files)).
+The medium dataset, the entire dataset as JSON, or the entire dataset as CSV (my version of it, as I've mentioned at the [files section](#dataset)).
 
 To running locally, I recommend downloading the dataset, so you won't need to download each time with Spark.
 
