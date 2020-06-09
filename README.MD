@@ -17,7 +17,8 @@ The complete analysis and discussion are available [here](https://medium.com/@br
 1. [Requirements](#requirements)
 2. [Project Overview](#overview)
 3. [File Descriptions](#files)
-4. [Running the project](#running) 
+4. [Running the project](#running)
+5. [Results](#results)
 
 ## Requirements <a name="requirements"></a>
 
@@ -95,4 +96,9 @@ To running locally, I recommend downloading the dataset, so you won't need to do
 
 If you want to run the visualizations, don't forget to install the requirements, especially the plotly lib.
 
+## Results <a name="results"></a>
 
+<div align="center">
+    <p>Best results for each model</p>
+    <img src="https://s3-sa-east-1.amazonaws.com/brunobitencourt.com/data/udacity/sparkify/results_df.png" width="1694" height="266" />
+</div>
