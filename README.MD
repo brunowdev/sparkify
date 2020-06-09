@@ -11,7 +11,6 @@ The complete analysis and discussion are available [here](https://medium.com/@br
 </p>
 </div>
 
-
 ### Table of Contents
 
 1. [Requirements](#requirements)
@@ -101,4 +100,24 @@ If you want to run the visualizations, don't forget to install the requirements,
 <div align="center">
     <p>Best results for each model</p>
     <img src="https://s3-sa-east-1.amazonaws.com/brunobitencourt.com/data/udacity/sparkify/results_df.png" width="1694" height="266" />
+</div>
+
+---
+
+<div align="center">
+    <img src="https://s3-sa-east-1.amazonaws.com/brunobitencourt.com/data/udacity/sparkify/all_models.png" width="600" height="600" />
+</div>
+
+---
+
+<div align="center">
+    <p>Heatmap - Absolute value</p>
+    <img src="https://s3-sa-east-1.amazonaws.com/brunobitencourt.com/data/udacity/sparkify/newplot+(1).png" width="1000" height="1000" />
+</div>
+
+---
+
+<div align="center">
+    <p>Heatmap - Feature vs. music listening time</p>
+    <img src="https://s3-sa-east-1.amazonaws.com/brunobitencourt.com/data/udacity/sparkify/newplot.png" width="1000" height="1000" />
 </div>
