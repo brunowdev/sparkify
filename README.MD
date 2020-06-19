@@ -112,7 +112,7 @@ If you want to run the visualizations, don't forget to install the requirements,
 
 <div align="center">
     <p>Heatmap - Absolute value</p>
-    <img src="https://s3-sa-east-1.amazonaws.com/brunobitencourt.com/data/udacity/sparkify/newplot+(1).png" width="1000" height="1000" />
+    <img src="https://s3-sa-east-1.amazonaws.com/brunobitencourt.com/data/udacity/sparkify/features_absolute.png" width="1000" height="1000" />
 </div>
 
 ---
